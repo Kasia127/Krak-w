@@ -12,8 +12,11 @@ margin: 0;
 font-family: Arial, sans-serif;
 }
  
-/* MENU */
+html {
+scroll-behavior: smooth;
+}
  
+/* MENU */
 .navbar {
 background-color: #2c3e50;
 display: flex;
@@ -38,8 +41,7 @@ cursor: pointer;
 color: #f39c12;
 }
  
-/* STRONA GŁÓWNA */
- 
+/* HOME */
 .home {
 background-image: url("https://images.unsplash.com/photo-1607427293702-036933bbf746");
 height: 100vh;
@@ -53,8 +55,7 @@ color: white;
 flex-direction: column;
 }
  
-/* SPIS TREŚCI */
- 
+/* SPIS */
 .spis {
 background: #2c3e50;
 color: white;
@@ -73,9 +74,8 @@ margin: 12px 0;
 }
  
 /* SEKCJE */
- 
 .content {
-padding: 100px 40px;
+padding: 120px 40px 40px;
 text-align: center;
 }
  
@@ -88,14 +88,17 @@ display: block;
 }
  
 /* ATRAKCJE */
- 
 .atrakcja {
+max-width: 900px;
+margin: 40px auto;
+text-align: left;
+}
+ 
+.atrakcja-top {
 display: flex;
-align-items: flex-start;
 justify-content: space-between;
+align-items: flex-start;
 gap: 20px;
-margin: 30px 0;
-text-align:left;
 }
  
 .atrakcja img {
@@ -106,12 +109,24 @@ border-radius: 12px;
 box-shadow: 0 6px 18px rgba(0,0,0,0.2);
 }
  
+.opis {
+margin-top: 10px;
+text-align: justify;
+line-height: 1.6;
+}
+ 
+ul {
+margin: 0;
+padding-left: 18px;
+}
+ 
 </style>
  
 </head>
  
 <body>
  
+<!-- MENU -->
 <div class="navbar">
 <button onclick="showSection('home')">Strona główna</button>
 <button onclick="showSection('atrakcje')">Atrakcje</button>
@@ -121,6 +136,7 @@ box-shadow: 0 6px 18px rgba(0,0,0,0.2);
 <button onclick="showSection('ciekawostki')">Ciekawostki</button>
 </div>
  
+<!-- HOME -->
 <div id="home" class="box active">
  
 <div class="home">
@@ -130,6 +146,7 @@ box-shadow: 0 6px 18px rgba(0,0,0,0.2);
 </div>
 </div>
  
+<!-- 🔥 TWÓJ POPRAWNY SPIS TREŚCI -->
 <div class="spis">
 <h2>📌 Spis treści</h2>
  
@@ -143,69 +160,111 @@ box-shadow: 0 6px 18px rgba(0,0,0,0.2);
  
 </div>
  
+<!-- TREŚĆ -->
 <div class="content">
  
+<!-- ATRAKCJE -->
 <div id="atrakcje" class="box">
 <h2>Atrakcje Krakowa</h2>
  
+<!-- WAWEL -->
 <div class="atrakcja">
+<div class="atrakcja-top">
 <div>
 <p><strong>🏰 Wawel</strong></p>
-<p>• Dawna siedziba królów Polski</p>
-<p>• Zamek Królewski i Katedra Wawelska</p>
-<p>• Jeden z najważniejszych symboli Krakowa</p>
+<ul>
+<li>Dawna siedziba królów Polski</li>
+<li>Zamek Królewski i Katedra Wawelska</li>
+<li>Symbol Polski</li>
+</ul>
 </div>
-<img src="https://cdn.wiadomosci.onet.pl/1/Kg5k9lLaHR0cDovL29jZG4uZXUvaW1hZ2VzL3B1bHNjbXMvTURVN01EQV8vZmM5ZmIyZmQ3N2I3NmRmZGVkZTJjYjZjNGJhYWRhMTguanBnkpUDAMyqzRVYzQwBkwXNCWDNBOzeAAKhMAehMQQ%22>
+<img src="https://mycompanypolska.pl/images/13061/45a88865977f9bfc9d313a6c33f31e76.webp">
+</div>
+<p class="opis">
+Wawel to jedno z najważniejszych miejsc w Polsce i symbol Krakowa. Przez wieki był siedzibą królów i centrum władzy. Znajduje się tam zamek oraz katedra, w której odbywały się koronacje i pochówki monarchów. Miejsce to ma ogromne znaczenie historyczne i kulturowe. Spacer po Wawelu pozwala poczuć atmosferę dawnych czasów. Zamek zachwyca architekturą i widokiem na Wisłę. To obowiązkowy punkt każdej wizyty w Krakowie.
+</p>
 </div>
  
+<!-- RYNEK -->
 <div class="atrakcja">
+<div class="atrakcja-top">
 <div>
 <p><strong>🏙️ Rynek Główny</strong></p>
-<p>• Jeden z największych rynków w Europie</p>
-<p>• Sukiennice i Kościół Mariacki</p>
-<p>• Centrum Krakowa</p>
+<ul>
+<li>Sukiennice</li>
+<li>Kościół Mariacki</li>
+<li>Centrum miasta</li>
+</ul>
 </div>
 <img src="https://media.krakow.travel/photos/20572/xxl.jpg">
 </div>
+<p class="opis">
+Rynek Główny to serce Krakowa i jeden z największych rynków w Europie. Otaczają go zabytkowe kamienice i restauracje. W centrum znajdują się Sukiennice, a obok Kościół Mariacki. To miejsce tętni życiem przez cały rok. Odbywają się tu wydarzenia kulturalne i koncerty. Atmosfera jest wyjątkowa zarówno w dzień, jak i w nocy. To obowiązkowy punkt zwiedzania miasta.
+</p>
+</div>
  
+<!-- SMOK -->
 <div class="atrakcja">
+<div class="atrakcja-top">
 <div>
 <p><strong>🐉 Smok Wawelski</strong></p>
-<p>• Legenda Krakowa</p>
-<p>• Rzeźba nad Wisłą</p>
-<p>• Ziaje ogniem</p>
+<ul>
+<li>Legenda Krakowa</li>
+<li>Rzeźba nad Wisłą</li>
+<li>Ziaje ogniem</li>
+</ul>
 </div>
 <img src="https://www.podrozepoeuropie.pl/system/gallery/images/images/000/005/416/large/Smok-wawelski-Krakow.JPG%22>
 </div>
+<p class="opis">
+Smok Wawelski to jedna z najsłynniejszych legend Krakowa. Według opowieści mieszkał pod Wawelem i terroryzował mieszkańców. Został pokonany przez sprytnego szewczyka. Dziś jego rzeźba stoi nad Wisłą. Co kilka minut zieje ogniem. To jedna z największych atrakcji miasta. Miejsce to chętnie odwiedzają turyści i rodziny. Legenda jest ważnym symbolem Krakowa.
+</p>
+</div>
  
+<!-- MARIACKI -->
 <div class="atrakcja">
+<div class="atrakcja-top">
 <div>
 <p><strong>⛪ Kościół Mariacki</strong></p>
-<p>• Ołtarz Wita Stwosza</p>
-<p>• Hejnał mariacki</p>
-<p>• Symbol Krakowa</p>
+<ul>
+<li>Ołtarz Wita Stwosza</li>
+<li>Hejnał mariacki</li>
+<li>Symbol Krakowa</li>
+</ul>
 </div>
 <img src="https://mariacki.com/wp-content/uploads/dji_0678.jpg">
 </div>
+<p class="opis">
+Kościół Mariacki to jeden z najważniejszych zabytków Krakowa. Znajduje się przy Rynku Głównym. W środku znajduje się słynny ołtarz Wita Stwosza. Co godzinę grany jest hejnał mariacki. Świątynia zachwyca gotycką architekturą. Jest jednym z najczęściej odwiedzanych miejsc w Polsce. To ważny symbol miasta i jego historii.
+</p>
+</div>
  
+<!-- KAZIMIERZ -->
 <div class="atrakcja">
+<div class="atrakcja-top">
 <div>
 <p><strong>🕍 Kazimierz</strong></p>
-<p>• Dawna dzielnica żydowska</p>
-<p>• Klimatyczne kawiarnie</p>
-<p>• Popularne miejsce spacerów</p>
+<ul>
+<li>Dawna dzielnica żydowska</li>
+<li>Kawiarnie i restauracje</li>
+<li>Klimatyczne uliczki</li>
+</ul>
 </div>
 <img src="https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcSGXO3gMFGbW6WpBIv9fAOt-hR40rg-xY6Qiv090gynlB3Pd0c2_ZzsmIFsRPlEz5jfiDP4fJNnH8xfWBpOlzK8C1o&s=19%22>
 </div>
+<p class="opis">
+Kazimierz to jedna z najbardziej klimatycznych dzielnic Krakowa. Dawniej była centrum życia żydowskiego. Dziś pełna jest kawiarni, barów i galerii. Można tu zobaczyć synagogi i zabytki. Ulice mają wyjątkowy klimat. To idealne miejsce na spacery. Wieczorem dzielnica tętni życiem i przyciąga turystów.
+</p>
+</div>
  
 </div>
  
+<!-- RESZTA -->
 <div id="gastronomia" class="box">
 <h2>Gastronomia</h2>
 <p>🥟 Pierogi</p>
 <p>🥯 Obwarzanek krakowski</p>
 <p>🍲 Żurek</p>
-<p>🍰 Kremówka</p>
 </div>
  
 <div id="zakwaterowanie" class="box">
@@ -220,12 +279,10 @@ box-shadow: 0 6px 18px rgba(0,0,0,0.2);
 <p>🚋 Tramwaje</p>
 <p>🚌 Autobusy</p>
 <p>🚆 Dworzec Kraków Główny</p>
-<p>✈️ Lotnisko Balice</p>
 </div>
  
 <div id="ciekawostki" class="box">
 <h2>Ciekawostki</h2>
-<p>🐉 Smok Wawelski</p>
 <p>🎓 Uniwersytet Jagielloński</p>
 <p>🏰 Dawna stolica Polski</p>
 </div>
@@ -235,11 +292,7 @@ box-shadow: 0 6px 18px rgba(0,0,0,0.2);
 <script>
 function showSection(id) {
 let sections = document.querySelectorAll(".box");
- 
-sections.forEach(section => {
-section.classList.remove("active");
-});
- 
+sections.forEach(s => s.classList.remove("active"));
 document.getElementById(id).classList.add("active");
 window.scrollTo(0,0);
 }
